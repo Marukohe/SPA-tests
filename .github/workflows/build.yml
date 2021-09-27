@@ -27,7 +27,7 @@ jobs:
           git config --local user.email "spatester@users.noreply.github.com"
           git config --local user.name "spatester"
           git add .
-          git commit -m "auto generate expected answer."
+          git commit --allow-empty -m "auto generate expected answer."
 
       - name: push changes
         uses: ad-m/github-push-action@master
