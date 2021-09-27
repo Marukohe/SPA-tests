@@ -1,0 +1,11 @@
+-------------------- <TestA: void <init>()> (livevar) --------------------
+[0@L1] invokespecial %this.<java.lang.Object: void <init>()>(); []
+[1@L1] return; []
+
+-------------------- <TestA: int sum(int,int)> (livevar) --------------------
+[0@L3] c = a + b; [b, c]
+[1@L4] c = c + b; [b, c]
+[2@L5] d = c; [b, d]
+[3@L6] d = d + b; [d]
+[4@L7] return d; []
+
