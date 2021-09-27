@@ -1,4 +1,4 @@
-public class TestA.java {
+public class TestA {
     public int sum(int a, int b) {
         int c = a + b;
         c = c + b;

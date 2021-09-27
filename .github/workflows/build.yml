@@ -1,0 +1,36 @@
+name: generate expected files
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    container:
+      image: ghcr.io/marukohe/spatester:v1.2
+      credentials:
+        username: Marukohe
+        password: ${{ secrets.DOCKER_CONTAINER_REGISTRY_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: gegnerate expected files
+        run: |
+          cp -r /root/workspace/ ../
+          cd ../workspace && ./generate.sh
+
+      - name: commit files
+        run: |
+          git config --local user.email "spatester@users.noreply.github.com"
+          git config --local user.name "spatester"
+          git add .
+          git commit -m "auto generate expected answer."
+
+      - name: push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          force: true
