@@ -2,9 +2,9 @@ name: generate expected files
 
 on:
   push:
-    branches: main
+    branches: dfa
   pull_request:
-    branches: main
+    branches: dfa
 
 jobs:
   build:
