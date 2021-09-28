@@ -3,8 +3,12 @@ name: generate expected files
 on:
   push:
     branches: dfa
+    paths:
+      - '!readme.md'
   pull_request:
     branches: dfa
+    paths:
+      - '!readme.md'
 
 jobs:
   build:
