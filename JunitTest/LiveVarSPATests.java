@@ -19,4 +19,14 @@ public class LiveVarSPATests {
     public void testB() {
         testLV("TestB");
     }
+    
+    @Test
+    public void testC() {
+        testLV("TestC");
+    }
+
+    @Test
+    public void testD() {
+        testLV("TestD");
+    }
 }
