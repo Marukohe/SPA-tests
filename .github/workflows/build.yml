@@ -13,7 +13,7 @@ jobs:
       image: ghcr.io/marukohe/spatester:v1.2
       credentials:
         username: Marukohe
-        password: ${{ secrets.DOCKER_CONTAINER_REGISTRY_TOKEN }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
 
