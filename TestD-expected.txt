@@ -1,0 +1,18 @@
+-------------------- <TestD: void <init>()> (livevar) --------------------
+[0@L1] invokespecial %this.<java.lang.Object: void <init>()>(); []
+[1@L1] return; []
+
+-------------------- <TestD: java.lang.String accessString()> (livevar) --------------------
+[0@L3] temp$0 = new java.lang.StringBuilder; [temp$0]
+[1@L3] invokespecial temp$0.<java.lang.StringBuilder: void <init>()>(); [temp$0]
+[2@L3] stringBuilder = temp$0; [stringBuilder]
+[3@L4] %stringconst0 = "hello"; [%stringconst0, stringBuilder]
+[4@L4] temp$1 = invokevirtual stringBuilder.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(%stringconst0); [stringBuilder, temp$1]
+[5@L4] %stringconst1 = " "; [%stringconst1, stringBuilder, temp$1]
+[6@L4] temp$2 = invokevirtual temp$1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(%stringconst1); [stringBuilder, temp$2]
+[7@L4] %stringconst2 = "world!
+"; [%stringconst2, stringBuilder, temp$2]
+[8@L4] temp$3 = invokevirtual temp$2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(%stringconst2); [stringBuilder]
+[9@L4] temp$4 = invokevirtual stringBuilder.<java.lang.StringBuilder: java.lang.String toString()>(); [temp$4]
+[10@L5] return temp$4; []
+
