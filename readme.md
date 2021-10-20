@@ -5,7 +5,7 @@
 ```
 cd <path>/<to>/<tai-e>
 git submodule add https://github.com/Marukohe/SPA-tests.git src/test/resources/SPA-tests
-cp src/test/resources/SPA-tests/JunitTest/DeadCodeSPATests.java src/test/java/pascal/tai/analysis/dataflow/analysis
+cp src/test/resources/SPA-tests/JunitTest/DeadCodeSPATests.java src/test/java/pascal/taie/analysis/dataflow/analysis
 ```
 
 ## 添加测试
