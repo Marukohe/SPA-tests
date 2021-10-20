@@ -1,0 +1,9 @@
+-------------------- <TestB: void <init>()> (deadcode) --------------------
+
+-------------------- <TestB: void constant()> (deadcode) --------------------
+[2@L4] j = i << %intconst0;
+[5@L7] b = a >> %intconst0;
+[6@L8] c = a >>> %intconst0;
+
+-------------------- <TestB: void useB(int)> (deadcode) --------------------
+
