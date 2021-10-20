@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     container:
-      image: ghcr.io/marukohe/spatester:v1.2
+      image: ghcr.io/marukohe/spatester:v1.3
       credentials:
         username: Marukohe
         password: ${{ secrets.DOCKER_CONTAINER_REGISTRY_TOKEN }}
