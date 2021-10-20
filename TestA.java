@@ -3,9 +3,9 @@ public class TestA {
         int a = 1;
         int b = 0;
         switch(a) {
-            case 0 : b = 100; break;
+            case 0 : b = 100;
             case 1 : b = 200;
-            case 2 : b = 300 break;
+            case 2 : b = 300; break;
             default: b = 400;
         }
         testNAC(b);
