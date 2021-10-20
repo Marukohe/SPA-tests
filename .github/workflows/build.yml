@@ -2,7 +2,7 @@ name: generate expected files
 
 on:
   push:
-    branches: dfa
+    branches: deadcode
 
 jobs:
   build:
