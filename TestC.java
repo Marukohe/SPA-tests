@@ -6,7 +6,7 @@ public class TestC {
         c = 0;
     }
 
-    void use(int x){
-
+    int use(int x){
+        return -1;
     }
 }
