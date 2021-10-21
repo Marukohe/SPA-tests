@@ -1,0 +1,10 @@
+-------------------- <TestD: void <init>()> (deadcode) --------------------
+
+-------------------- <TestD: void Loops()> (deadcode) --------------------
+[4@L3] goto 12;
+[12@L3] nop;
+[13@L6] invokevirtual %this.<TestD: void useless()>();
+[14@L6] return;
+
+-------------------- <TestD: void useless()> (deadcode) --------------------
+

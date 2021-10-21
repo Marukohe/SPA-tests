@@ -1,0 +1,9 @@
+-------------------- <TestC: void <init>()> (deadcode) --------------------
+
+-------------------- <TestC: void assignmentTests()> (deadcode) --------------------
+[2@L4] b = temp$0;
+[4@L5] c = a + %intconst0;
+[5@L6] c = 0;
+
+-------------------- <TestC: int use(int)> (deadcode) --------------------
+
