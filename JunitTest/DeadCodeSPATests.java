@@ -29,4 +29,13 @@ public class DeadCodeSPATests {
     public void testD() {
         testDCD("TestD");
     }
+
+    @Test
+    public void testW1() { testDCD("TestW1"); }
+
+    @Test
+    public void testW2() {testDCD("TestW2");}
+
+    @Test
+    public void testW3() {testDCD("TestW3");}
 }
