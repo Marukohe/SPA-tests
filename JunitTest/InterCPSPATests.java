@@ -6,7 +6,7 @@ import pascal.taie.analysis.dataflow.inter.InterConstantPropagation;
 
 public class InterCPSPATests {
 
-    private static final String CLASS_PATH = "src/test/resources/dataflow/constprop/inter";
+    private static final String CLASS_PATH = "src/test/resources/SPA-tests";
 
     static void test(String inputClass) {
         Tests.testDFA(inputClass, CLASS_PATH, InterConstantPropagation.ID,
