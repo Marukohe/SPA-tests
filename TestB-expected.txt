@@ -1,0 +1,21 @@
+-------------------- <TestB: void main(java.lang.String[])> (inter-constprop) --------------------
+[0@L3] a = 1; {a=1}
+[1@L4] %intconst0 = 1; {%intconst0=1, a=1}
+[2@L4] if (a >= %intconst0) goto 4; {%intconst0=1, a=1}
+[3@L4] goto 7; {%intconst0=1, a=1}
+[4@L4] nop; {%intconst0=1, a=1}
+[5@L5] temp$0 = invokestatic <TestB: int minusOne(int)>(a); {%intconst0=1, a=1}
+[6@L5] a = temp$0; {%intconst0=1, a=0, temp$0=0}
+[7@L5] nop; {%intconst0=1, a=NAC, temp$0=0}
+[8@L7] temp$1 = invokestatic <TestB: int getNAC(int)>(a); {%intconst0=1, a=NAC, temp$0=0}
+[9@L7] b = temp$1; {%intconst0=1, a=NAC, b=NAC, temp$0=0, temp$1=NAC}
+[10@L7] return; {%intconst0=1, a=NAC, b=NAC, temp$0=0, temp$1=NAC}
+
+-------------------- <TestB: int minusOne(int)> (inter-constprop) --------------------
+[0@L10] %intconst0 = 1; {%intconst0=1, a=1}
+[1@L10] temp$0 = a - %intconst0; {%intconst0=1, a=1, temp$0=0}
+[2@L11] return temp$0; {%intconst0=1, a=1, temp$0=0}
+
+-------------------- <TestB: int getNAC(int)> (inter-constprop) --------------------
+[0@L15] return a; {a=NAC}
+
