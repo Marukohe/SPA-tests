@@ -18,4 +18,9 @@ public class InterCPSPATests {
     public void TestA() {
         InterCPSPATests.test("TestA");
     }
+
+    @Test
+    public void TestB() {
+        InterCPSPATests.test("TestB");
+    }
 }
