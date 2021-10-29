@@ -1,0 +1,69 @@
+-------------------- <A: void <init>()> (inter-constprop) --------------------
+[0@L36] invokespecial %this.<java.lang.Object: void <init>()>(); {}
+[1@L36] return; {}
+
+-------------------- <A: int get()> (inter-constprop) --------------------
+[0@L37] temp$0 = 1; {temp$0=1}
+[1@L37] return temp$0; {temp$0=1}
+
+-------------------- <B: void <init>()> (inter-constprop) --------------------
+[0@L52] invokespecial %this.<A: void <init>()>(); {}
+[1@L52] return; {}
+
+-------------------- <B: int get()> (inter-constprop) --------------------
+[0@L53] temp$0 = 1; {temp$0=1}
+[1@L53] return temp$0; {temp$0=1}
+
+-------------------- <C: void <init>()> (inter-constprop) --------------------
+[0@L56] invokespecial %this.<B: void <init>()>(); {}
+[1@L56] return; {}
+
+-------------------- <C: int get()> (inter-constprop) --------------------
+[0@L57] temp$0 = 1; {temp$0=1}
+[1@L57] return temp$0; {temp$0=1}
+
+-------------------- <D: int get()> (inter-constprop) --------------------
+[0@L45] temp$0 = 1; {temp$0=1}
+[1@L45] return temp$0; {temp$0=1}
+
+-------------------- <E: void <init>()> (inter-constprop) --------------------
+[0@L40] invokespecial %this.<java.lang.Object: void <init>()>(); {}
+[1@L40] return; {}
+
+-------------------- <E: int get()> (inter-constprop) --------------------
+[0@L41] temp$0 = 1; {temp$0=1}
+[1@L41] return temp$0; {temp$0=1}
+
+-------------------- <F: int get()> (inter-constprop) --------------------
+[0@L49] temp$0 = 1; {temp$0=1}
+[1@L49] return temp$0; {temp$0=1}
+
+-------------------- <TestW1: void main(java.lang.String[])> (inter-constprop) --------------------
+[0@L7] temp$0 = new B; {}
+[1@L7] invokespecial temp$0.<B: void <init>()>(); {}
+[2@L7] obj1 = temp$0; {}
+[3@L8] temp$1 = invokeinterface obj1.<I: int get()>(); {}
+[4@L8] num1 = temp$1; {num1=1, temp$1=1}
+[5@L9] temp$2 = new E; {num1=1, temp$1=1}
+[6@L9] invokespecial temp$2.<E: void <init>()>(); {num1=1, temp$1=1}
+[7@L9] obj2 = temp$2; {num1=1, temp$1=1}
+[8@L10] temp$3 = invokeinterface obj2.<I: int get()>(); {num1=1, temp$1=1}
+[9@L10] num2 = temp$3; {num1=1, num2=1, temp$1=1, temp$3=1}
+[10@L11] temp$4 = new C; {num1=1, num2=1, temp$1=1, temp$3=1}
+[11@L11] invokespecial temp$4.<C: void <init>()>(); {num1=1, num2=1, temp$1=1, temp$3=1}
+[12@L11] obj3 = temp$4; {num1=1, num2=1, temp$1=1, temp$3=1}
+[13@L12] temp$5 = invokeinterface obj3.<III: int get()>(); {num1=1, num2=1, temp$1=1, temp$3=1}
+[14@L12] num3 = temp$5; {num1=1, num2=1, num3=1, temp$1=1, temp$3=1, temp$5=1}
+[15@L13] temp$6 = invokestatic <TestW1: int use(int,int,int)>(num1, num2, num3); {num1=1, num2=1, num3=1, temp$1=1, temp$3=1, temp$5=1}
+[16@L13] ans = temp$6; {ans=3, num1=1, num2=1, num3=1, temp$1=1, temp$3=1, temp$5=1, temp$6=3}
+[17@L14] invokestatic <TestW1: void use2(int)>(ans); {ans=3, num1=1, num2=1, num3=1, temp$1=1, temp$3=1, temp$5=1, temp$6=3}
+[18@L14] return; {ans=3, num1=1, num2=1, num3=1, temp$1=1, temp$3=1, temp$5=1, temp$6=3}
+
+-------------------- <TestW1: int use(int,int,int)> (inter-constprop) --------------------
+[0@L18] t = x + y; {t=2, x=1, y=1, z=1}
+[1@L19] s = t + z; {s=3, t=2, x=1, y=1, z=1}
+[2@L20] return s; {s=3, t=2, x=1, y=1, z=1}
+
+-------------------- <TestW1: void use2(int)> (inter-constprop) --------------------
+[0@L23] return; {num=3}
+
