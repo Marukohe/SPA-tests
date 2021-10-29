@@ -8,7 +8,7 @@ public class TestW1 {
         int num1 = obj1.get();
         I obj2 = new E();
         int num2 = obj2.get();
-        I obj3 = new C();
+        III obj3 = new C();
         int num3 = obj3.get();
         int ans = use(num1, num2, num3);
         use2(ans);
@@ -49,7 +49,7 @@ class F extends E{
     public int get() {return 1;}
 }
 
-class B extends A{
+class B extends A implements III{
     public int get() {return 1;}
 }
 
